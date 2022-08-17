@@ -1,12 +1,18 @@
-import flask
-from flask import Flask
+
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 
 @app.route("/", methods=["POST", "GET"])
-def hello_world():
-    if flask.request.method == "POST":
-        sdg_text = flask.request.form["sdg_text"]
-        print(sdg_text)
-    return flask.render_template("index.html")
+def home():
+    if request.method == "POST":
+        sdg_text = request.form["sdg_text"]
+    return render_template("home.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)

@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SDG_CLF</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1>SDG_CLF</h1>
+{% extends "header.html" %}
+{% block content %}
+<div class="home">
+<form method="submit">asdasd</form>
 <form method="post">
-<form>
     <label for="sdg_text">SDG text</label>
     <br>
     <textarea rows=5 cols=75 name="sdg_text">{{ request.form["sdg_text"] }}</textarea>
@@ -20,6 +13,5 @@
         </button>
     </div>
 </form>
-
-</body>
-</html>
+</div>
+{% endblock %}
