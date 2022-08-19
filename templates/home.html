@@ -1,7 +1,6 @@
 {% extends "header.html" %}
 {% block content %}
 <div class="home">
-<form method="submit">asdasd</form>
 <form method="post">
     <label for="sdg_text">SDG text</label>
     <br>
@@ -13,6 +12,14 @@
         </button>
     </div>
 </form>
-    <p>{{ prediction }}</p>
+    {% if prediction %}
+        <h2>SDG predictions from text</h2>
+        <ul>
+        {% for p in prediction %}
+        <li>{{ p }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    {% endif %}
 </div>
 {% endblock %}
