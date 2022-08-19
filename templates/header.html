@@ -9,13 +9,12 @@
 <body>
 <header>
 <div class="container">
-    <h1 class="logo">SDG CLF</h1>
-    <strong><nav>
+    <h1 class="logo"><a id="home" href="{{ url_for('home') }}">SDG CLF</a></h1>
+    <nav>
         <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
         </ul>
-    </nav></strong>
+    </nav>
 </div>
 </header>
 <div class="container">
