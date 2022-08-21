@@ -121,6 +121,9 @@ h2{
     margin-top: 20px;
 }
 
+textarea{
+    width: 80%;
+}
 /*
 header .container{
     background-image: url("headerbackgroundimage.png");
