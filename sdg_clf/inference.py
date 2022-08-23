@@ -1,5 +1,4 @@
 import numpy as np
-import torch
 from scipy import special
 
 from sdg_clf import utils
