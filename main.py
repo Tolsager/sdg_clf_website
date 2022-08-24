@@ -11,7 +11,8 @@ def home():
     prediction = None
     if request.method == "POST":
         sdg_text = request.form["sdg_text"]
-        url = "https://sdg-clf-api-free.azurewebsites.net/predict"
+        # url = "https://sdg-clf-api-free.azurewebsites.net/predict"
+        url = "https://sdg-clf-api.azurewebsites.net/predict"
         post_obj = {"text": sdg_text}
         prediction = requests.post(url, json=post_obj)
         prediction = json.loads(prediction.content)["prediction"]
